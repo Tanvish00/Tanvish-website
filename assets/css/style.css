@@ -240,6 +240,34 @@ article.active {
 }
 
 
+.article-mid {
+
+  position: relative;
+
+  padding-bottom: 7px;
+
+}
+
+.article-mid::after {
+
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 30px;
+
+  height: 3px;
+
+  background: var(--text-gradient-yellow);
+
+  border-radius: 3px;
+
+}
+
 
 
 
