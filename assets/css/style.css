@@ -603,7 +603,7 @@ main {
 
 .testimonials-avatar-box {
   position: absolute;
-  top: 0;
+	
   left: 0;
   background: var(--bg-gradient-onyx);
   border-radius: 14px;
