@@ -240,7 +240,7 @@ article.active {
 }
 
 
-.article-mid {
+.article-body {
 
   position: relative;
 
@@ -248,7 +248,7 @@ article.active {
 
 }
 
-.article-mid::after {
+.article-body::after {
 
   content: "";
 
