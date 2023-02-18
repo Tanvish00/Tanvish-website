@@ -240,7 +240,7 @@ article.active {
 }
 .article-midtitle {
 
-  position: center;
+  position: relative;
 
   padding-bottom: 7px;
 
