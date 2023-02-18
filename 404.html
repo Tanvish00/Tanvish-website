@@ -77,12 +77,36 @@
     
     <article class="about  active" data-page="about">
 
+.meow {
 
+  position: relative;
+
+}
+
+.meow::after {
+
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 30px;
+
+  height: 3px;
+
+  background: var(--text-gradient-yellow);
+
+  border-radius: 3px;
+
+}
          
-<h2 class="h2 article-body">Page Not Found!</h2>
+<h2 class="h2 meow">Page Not Found!</h2>
 
    
-<h2 class="h2 article-body">Error 404</h2>
+<h2 class="h2 meow">Error 404</h2>
 
 </article>
     </div>
