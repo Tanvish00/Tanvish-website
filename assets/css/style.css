@@ -238,33 +238,11 @@ article.active {
   font-size: var(--fs-7);
   font-weight: var(--fw-500);
 }
-.article-midtitle {
 
-  position: relative;
 
-  padding-bottom: 7px;
 
-}
 
-.article-midtitle::after {
 
-  content: "";
-
-  position: center;
-
-  bottom: 0;
-
-  left: 0;
-
-  width: 30px;
-
-  height: 3px;
-
-  background: var(--text-gradient-yellow);
-
-  border-radius: 3px;
-
-}
 .article-title {
   position: relative;
   padding-bottom: 7px;
