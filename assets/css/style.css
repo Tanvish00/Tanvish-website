@@ -583,10 +583,17 @@ main {
 .testimonials-title { margin-bottom: 20px; }
 
 .testimonials-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 15px;
   margin: 0 -15px;
   padding: 25px 15px;
   padding-bottom: 35px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
 }
 
 .testimonials-item {
@@ -614,6 +621,7 @@ main {
   line-clamp: 4;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 
@@ -728,8 +736,6 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
-}
-
 
 /**
  * #clients 
