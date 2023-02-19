@@ -600,7 +600,7 @@ main {
   font-size: 18px;
   font-weight: var(--fw-300);
   line-height: 1.6;
-	
+margin-top:5px;
   display: -webkit-box;
   line-clamp: 4;
   -webkit-line-clamp: 4;
