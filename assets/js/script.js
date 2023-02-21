@@ -17,6 +17,36 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
   
+var dropdown = document.querySelector(".dropdown");
+
+var dropdownContent = document.querySelector(".dropdown-content");
+
+dropdown.addEventListener("mouseover", function() {
+
+  var rect = dropdown.getBoundingClientRect();
+
+  var spaceBelow = window.innerHeight - rect.bottom;
+
+  var spaceAbove = rect.top;
+
+  
+
+  if (spaceBelow < dropdownContent.offsetHeight && spaceAbove > dropdownContent.offsetHeight) {
+
+    dropdownContent.classList.add("top");
+
+    dropdownContent.classList.remove("bottom");
+
+  } else {
+
+    dropdownContent.classList.add("bottom");
+
+    dropdownContent.classList.remove("top");
+
+  }
+
+});
+
 
   
 
