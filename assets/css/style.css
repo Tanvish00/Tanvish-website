@@ -507,7 +507,7 @@ main {
   position: absolute;
   background: hsla(240, 1%, 17%, 0.75);
   backdrop-filter: blur(25px);
-	
+	border-radius: 12px 12px 12px 12px;
   box-shadow: var(--shadow-2);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
