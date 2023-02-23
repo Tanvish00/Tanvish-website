@@ -446,7 +446,13 @@ main {
   width: 100%;
   background: hsla(240, 1%, 17%, 0.75);
   backdrop-filter: blur(5px);
-  border: 1px solid var(--jet);
+  border-top: 2px solid #F8D568;
+border-left: 2px solid #F8D568;
+border-right: 2px solid #F8D568;
+border-bottom: 1px solid #F8D568;
+
+
+
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
