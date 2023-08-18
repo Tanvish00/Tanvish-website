@@ -54,14 +54,9 @@ dropdown.addEventListener("mouseover", function() {
   var rect = dropdown.getBoundingClientRect();
   var spaceBelow = window.innerHeight - rect.bottom;
   var spaceAbove = rect.top;
-  
-  if (spaceAbove < dropdownContent.offsetHeight) {
+
     dropdownContent.classList.add("bottom");
-    dropdownContent.classList.remove("top");
-  } 
-  else {
     dropdownContent.classList.add("top");
-    dropdownContent.classList.remove("bottom");
-  }
+  
 });
 </script>
