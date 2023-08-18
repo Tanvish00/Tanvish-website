@@ -441,7 +441,7 @@ main {
 
 .navbar {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   background: hsla(240, 1%, 17%, 0.75);
@@ -450,10 +450,7 @@ main {
 border-left: 2px solid #F8D568;
 border-right: 2px solid #F8D568;
 border-bottom: 1px solid #F8D568;
-
-
-
-  border-radius: 12px 12px 0 0;
+  border-radius: 0px 0px 12px 12px;
   box-shadow: var(--shadow-2);
   z-index: 5;
 }
