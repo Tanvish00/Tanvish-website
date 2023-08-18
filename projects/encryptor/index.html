@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta property="og:title" content="Tanvish | Text Encryptor" />
+
+  <meta property="og:url" content="https://tanvish.me/404.html" />
+<meta property="og:image" content="https://tanvish.me/assets/images/encrypted.webp" />
+
+  <meta property="og:thumbnail" content="https://tanvish.me/assets/images/encrypted.webp" />
+  <meta property="og:description" content="Page Not Found" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Text Encryptor">
+<title>Tanvish | Encryptor </title>
+  
+
+ <style>
+
+   body {font-family: Garamond, serif;
+   text-align: center;}
+
+   </style>
+
+  <!--
+
+    - favicon
+
+  -->
+
+  <link rel="shortcut icon" href="https://tanvish.me/assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+
+    - custom css link
+
+  -->
+
+  <link rel="stylesheet" href="https://tanvish.me/assets/css/style.css">
+
+</head>
+<body>
+<main>
+  <div class="main-content">
+
+      <!--
+
+        - #NAVBAR
+
+      -->
+
+    <nav id="navbar" class="navbar">
+
+      <script>
+        fetch('https://tanvish.me/assets/navbar.html')
+.then(response => response.text())
+.then(data => {
+document.getElementById('navbar').innerHTML = data;
+});
+        </script>
+      </nav>
+    
+    <article class="about  active" data-page="about">
+
+      <body>
+        <h1 class="meow">Tanvish | Text Encryptor</h1>
+      
+        <label style="text-align:left;" for="text-input">Text:</label>
+        <textarea id="text-input"></textarea>
+      
+        <label style="text-align: left;" for="password-input">Password:</label>
+        <input type="text-input" id="password-input">
+      <div style="justify-content: center;">
+        <ul>
+       <li> <button id="encrypt-button">Encrypt</button> </li>
+        <li> <button id="decrypt-button">Decrypt</button></li>
+        </ul>
+      </div>
+        <h2 style="text-align: left;">Output:</h2>
+        <div style="color:white" id="output"></div>
+      
+        <script>
+          // JavaScript code goes here
+          document.addEventListener('DOMContentLoaded', () => {
+            const encryptButton = document.getElementById('encrypt-button');
+            const decryptButton = document.getElementById('decrypt-button');
+            const outputDiv = document.getElementById('output');
+      
+            encryptButton.addEventListener('click', () => {
+              const text = document.getElementById('text-input').value;
+              const password = document.getElementById('password-input').value;
+              outputDiv.textContent = 'Encrypting...';
+      
+              fetch(`https://api.tanvish.me/text/encrypt?text=${encodeURIComponent(text)}&password=${encodeURIComponent(password)}`)
+                .then(response => response.json())
+                .then(data => {
+                  if (data.output) {
+                    outputDiv.textContent = data.output;
+                  } else {
+                    outputDiv.textContent = 'ERROR: No Output';
+                  }
+                  outputDiv.scrollTop = outputDiv.scrollHeight;
+                })
+                .catch(error => {
+                  outputDiv.textContent = 'ERROR: Encryption Failed!';
+                  console.error(error);
+                });
+            });
+      
+            decryptButton.addEventListener('click', () => {
+              const text = document.getElementById('text-input').value;
+              const password = document.getElementById('password-input').value;
+              outputDiv.textContent = 'Decrypting...';
+      
+              fetch(`https://api.tanvish.me/text/decrypt?text=${encodeURIComponent(text)}&password=${encodeURIComponent(password)}`)
+                .then(response => response.json())
+                .then(data => {
+                  if (data.output) {
+                    outputDiv.textContent = data.output;
+                  } else {
+                    outputDiv.textContent = 'ERROR: No Output';
+                  }
+                  outputDiv.scrollTop = outputDiv.scrollHeight;
+                })
+                .catch(error => {
+                  outputDiv.textContent = "ERROR: Decryption Failed!";
+                  console.error(error);
+                });
+            });
+          });
+        </script>
+      </body>
+
+</article>
+    </div>
+  </main>
+  <script src="https://tanvish.me/assets/js/script.js"></script>
+  </body>
+  <style>
+body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      color: #fff;
+    }
+    li {
+  display: inline-block;
+  margin-right: 10px; /* add spacing between items */
+}
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      text-align: left;
+      margin-top: 5px;
+      border: 2px solid #f8d468;
+      border-radius: 4px;
+      box-shadow:0px 0px 10px #f8d468;
+      box-sizing: border-box;
+      font-size: 24px;
+      color: white;
+      background-color:transparent;
+      word-break: break-all;
+    }
+
+    textarea {
+      resize: vertical;
+      height: auto;
+      min-height: 80px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      color: #000;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #encrypt-button {
+      background-color: lime;
+      font-weight:bold;
+      border: 1px solid lime;
+    }
+
+    #encrypt-button:hover {
+      background-color: #32cd32;
+      border-color: #32cd32;
+    }
+
+    #decrypt-button {
+      background-color: red;
+      font-weight:bold;
+      border: 1px solid red;
+    }
+
+    #decrypt-button:hover {
+      background-color: #ff0000;
+      border-color: #ff0000;
+    }
+
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 2px solid #f8d468;
+      border-radius: 4px;
+      color:white;
+      box-shadow:0px 0px 10px #f8d468;
+      background-color: transparent;
+      overflow: auto;
+      max-height: 300px;
+      white-space: pre-wrap;
+      word-break: break-all;
+
+    }
+    .meow {
+
+position: relative;
+padding-bottom:7px;
+color: white;
+margin-bottom: 20px;
+font-size:24px;
+
+}
+
+.meow::after {
+
+content: "";
+
+position: absolute;
+
+bottom: 0;
+
+left: 0;
+
+width: 100%;
+
+height: 5px;
+
+background: var(--text-gradient-yellow);
+
+border-radius: 3px;
+
+}
+  </style>
+</html>
