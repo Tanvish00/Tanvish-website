@@ -527,14 +527,14 @@ main {
 
 /* Position the dropdown content below the dropdown button by default */
 .dropdown-content.bottom {
-  top: 100%;
-  bottom: auto;
+  top:50%;
+  bottom: 50%;
 }
 
 /* Position the dropdown content above the dropdown button if there is not enough space below */
 .dropdown-content.top {
-  top: auto;
-  bottom: 100%;
+  top: 50%;
+  bottom: 50%;
 }
 
 
