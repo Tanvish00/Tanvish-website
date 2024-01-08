@@ -100,7 +100,7 @@ document.getElementById('navbar').innerHTML = data;
               const password = document.getElementById('password-input').value;
               outputDiv.textContent = 'Encrypting...';
       
-              fetch(`https://api.tanvish.me/text/encrypt?text=${encodeURIComponent(text)}&password=${encodeURIComponent(password)}`)
+              fetch(`https://api.tanvish.me/text/encrypt?text=${encodeURIComponent(text)}`)
                 .then(response => response.json())
                 .then(data => {
                   if (data) {
@@ -121,7 +121,7 @@ document.getElementById('navbar').innerHTML = data;
               const password = document.getElementById('password-input').value;
               outputDiv.textContent = 'Decrypting...';
       
-              fetch(`https://api.tanvish.me/text/decrypt?text=${encodeURIComponent(text)}&password=${encodeURIComponent(password)}`)
+              fetch(`https://api.tanvish.me/text/decrypt?text=${encodeURIComponent(text)}&pass=${encodeURIComponent(password)}`)
                 .then(response => response.json())
                 .then(data => {
                   if (data.text) {
