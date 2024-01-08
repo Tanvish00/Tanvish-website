@@ -103,8 +103,8 @@ document.getElementById('navbar').innerHTML = data;
               fetch(`https://api.tanvish.me/text/encrypt?text=${encodeURIComponent(text)}&password=${encodeURIComponent(password)}`)
                 .then(response => response.json())
                 .then(data => {
-                  if (data.output) {
-                    outputDiv.textContent = data.output;
+                  if (data) {
+                    outputDiv.textContent = `Text: ${data.text}\nPass: ${data.password}`;
                   } else {
                     outputDiv.textContent = 'ERROR: No Output';
                   }
@@ -124,8 +124,8 @@ document.getElementById('navbar').innerHTML = data;
               fetch(`https://api.tanvish.me/text/decrypt?text=${encodeURIComponent(text)}&password=${encodeURIComponent(password)}`)
                 .then(response => response.json())
                 .then(data => {
-                  if (data.output) {
-                    outputDiv.textContent = data.output;
+                  if (data.text) {
+                    outputDiv.textContent = data.text;
                   } else {
                     outputDiv.textContent = 'ERROR: No Output';
                   }
